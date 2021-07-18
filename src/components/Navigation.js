@@ -10,9 +10,9 @@ import {
   TopNavigationAction,
 } from "@ui-kitten/components";
 
-const MenuIcon = (props) => <Icon {...props} name="more-vertical" />;
+const MenuIcon = (props) => <Icon {...props} name="more-vertical-outline" />;
 
-const InfoIcon = (props) => <Icon {...props} name="info" />;
+const InfoIcon = (props) => <Icon {...props} name="info-outline" />;
 
 const Title = (props) => (
   <View style={styles.titleContainer}>
@@ -56,7 +56,11 @@ const Navigation = () => {
 const styles = StyleSheet.create({
   container: {
     shadowColor: "#000",
-    elevation: 1,
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.8,
+    shadowRadius: 1,
+    elevation: 2,
+    paddingTop: 32,
   },
   titleContainer: {
     flexDirection: "row",
